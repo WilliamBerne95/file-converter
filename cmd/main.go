@@ -1,18 +1,20 @@
 package main
 
 import (
-    "log"
-    "net/http"
-    "github.com/yourusername/file-converter/internal/api"
-    "github.com/yourusername/file-converter/internal/cli"
+	"log"
+	"net/http"
+
+	"github.com/WilliamBerne95/file-converter/internal/api"
 )
 
 func main() {
-    // Démarrer le serveur API
-    go func() {
-        log.Fatal(http.ListenAndServe(":8080", api.Router()))
-    }()
+	// Log de démarrage
+	log.Printf("Démarrage du serveur...")
 
-    // Exécuter l'interface CLI
-    cli.Execute()
+	// Création du router
+	router := api.Router()
+
+	// Démarrage du serveur
+	log.Printf("Serveur démarré sur http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
