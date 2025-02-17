@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <nom>Jean</nom>
+        <age>25</age>
+        <ville>Paris</ville>
+    </record>
+    <record>
+        <nom>Marie</nom>
+        <age>30</age>
+        <ville>Lyon</ville>
+    </record>
+</records>

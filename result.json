@@ -1,0 +1,17 @@
+[
+    {
+        "age": "25",
+        "ville": "Paris",
+        "﻿nom": "Jean"
+    },
+    {
+        "age": "30",
+        "ville": "Lyon",
+        "﻿nom": "Marie"
+    },
+    {
+        "age": "28",
+        "ville": "Marseille",
+        "﻿nom": "Pierre"
+    }
+]

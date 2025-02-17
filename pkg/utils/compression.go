@@ -29,3 +29,18 @@ func Compress(input io.Reader, output io.Writer) error {
 	_, err = io.Copy(output, &buffer)
 	return err
 }
+
+func Decompress(input io.Reader, output io.Writer) error {
+	gzipReader, err := gzip.NewReader(input)
+	if err != nil {
+		return fmt.Errorf("erreur lors de l'initialisation du reader gzip: %v", err)
+	}
+	defer gzipReader.Close()
+
+	_, err = io.Copy(output, gzipReader)
+	if err != nil {
+		return fmt.Errorf("erreur lors de la décompression: %v", err)
+	}
+
+	return nil
+}
